@@ -12,10 +12,11 @@ const app = express();
 app.use(
   cors({
     origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["*"],
+    allowedHeaders: ["*"],
   })
 );
-app.use(express.json());
+
 app.use(morgan("dev"));
 
 app.use(bodyParser.json());
